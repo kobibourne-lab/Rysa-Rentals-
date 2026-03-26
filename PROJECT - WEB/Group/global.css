@@ -1,0 +1,285 @@
+ body {   /* Page layout and centering */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+	padding-left:10%;
+	padding-right:14%;  /*added to fix tim spacing problem*/
+	height:100%;
+    /*background: linear-gradient(135deg, #141e30, #243b55);*/
+	background-color:#243b55;
+	
+}
+
+.header{
+    margin-top:0;  /**/
+    width:78%; /*was 85*/  /*sets width */
+    height: 15%;/*15%;*/  /*sets height */
+    position: fixed;  
+    background-color: #243b55; /*#333*/ /*#243b55     #1f2937 */
+	display: flex;
+    align-items: center; /*centers content in header*/
+	border:4px solid #dbeafe; /*border styling, width-type-color*/
+	border-radius: 8px;     /*these 4 new*/
+	
+}
+
+.logo
+{
+    position: relative;  /* Make it stick, even on scroll */
+    float: right;
+	margin-left: auto;
+}
+
+.logo img{
+    height: 160px; /*was 150*/
+}
+
+form {   /* Form container with white background */
+    background-color: #dbeafe; /*WAS WHITE*/
+    margin:130px auto 50px auto;
+    max-width: 550px; /*was 600*/
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 200px;
+}
+
+.center {
+    
+	margin-left:230px;
+}
+
+.php-form {   /* Form container php-page with white background */
+    background-color: #dbeafe;
+
+    margin:300px auto 50px auto;
+    max-width: 400px; /*was 600*/
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+h3 {
+    text-align: center;
+}
+
+h1
+{
+	text-align: center;
+
+}
+.title
+{
+    color: #dbeafe;         
+    font-size: 1.5rem;     
+    margin-left: 38vw;
+	font-family:  'Courier New', monospace;
+    
+	
+}
+
+.form-group { /* Space between form fields */
+    margin-bottom: 20px;
+    display:flex;
+    gap:30px;
+    align-items:center;
+    width:100%;
+    justify-content: space-between;
+}
+
+/* Label styling */
+label {
+    display: inline-block;
+    color: #555;
+    font-weight: bold;
+}
+
+input { /* Input field styling */
+    width: 50%; /*WAS 60*/
+	min-width:100px; /*added*/
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    display:inline-block;
+}
+
+
+input:focus, textarea:focus, select:focus {   /* Brighter reen border when input is focused */
+    border-color: darkgrey;
+}
+
+input:invalid { /* Red border for invalid input */
+    border-color: #ff6b6b;
+}
+
+input:valid {   /* Green border for valid input */
+    border-color: #51cf66;
+}
+
+input:hover   /*changes color of background when hovering -k */
+    {  
+        background-color: #E0E0DD;   
+    }
+
+.button-group {     /* Button layout */
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+	justify-content: center; /*added*/
+}
+
+button {    /* Button styling */
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button input {    /* Button styling */
+    flex: 1;
+	width:20%;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"] {     /* Green submit button */
+    background-color:  #2563eb;/*#4CAF50;*/
+    color: white;
+}
+
+button[type="submit"]:hover {   /* Darker green on hover */
+    background-color: #1e3a8a; /*#45a049;*/
+}
+
+button[type="reset"] {  /* Red clear button */
+    background-color:  #da190b;     /*#f44336;*/
+    color: white;
+}
+
+button[type="reset"]:hover {    /* Darker red on hover */
+    background-color: #ab3129;    /*#da190b*/
+}
+
+button.amendbutton
+{
+	background-color: #607084;
+	color:white;
+}
+
+button.amendbutton:hover 
+{
+    background-color: #4e5c6c;
+}
+
+button.deletebutton 
+{
+    background-color: #da190b;
+    color: white;
+	margin-left:150px;
+	margin-right:150px;
+}
+
+button.deletebutton:hover 
+{
+    background-color: #ab3129;
+}
+
+.return{ /* return button that is an input tag on php files */
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #607084;
+    color: white;
+    text-decoration: none;
+}
+
+.return:hover{
+    background-color: #1e3a8a;
+    cursor: pointer;
+    color: white;
+}
+
+.listbox{
+	width:40%;
+	min-width:100px;
+}
+
+.listboxJ
+{
+	margin-bottom: 20px;
+	width:100%;
+}
+
+.notSubmitted{
+    text-align: center;
+    color: Black;
+    font-size: 0.9em;
+}
+
+
+select {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.button-menu { /* Input field styling */
+    width: 30%; /*WAS 60*/
+	min-width:120px; /*added*/
+    min-height:80px; /*added*/
+    padding: 10px;
+	margin-left:10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    display:inline-block;
+    background-color: #edf2ef;
+    color:black;
+}
+
+.button-menu a {
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    color:black;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+table{
+	margin-left: auto;
+    margin-right: auto;
+	text-align:center;
+	border: 1px solid black; /* simple border for table */
+}
+
+
+/* Cells */
+th, td {
+    padding: 5px;           /* spacing inside cells */
+    border: 1px solid black; /* border around cells */
+}

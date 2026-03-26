@@ -1,0 +1,108 @@
+/* Name: Sarah Crotty */
+/* Student Number: C00309469 */
+/* Purpose: CSS for company report page */
+/* Project: Car Rental */
+
+/* removes default form styling from our global css cause a box was appearing */
+.report-form {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* company report container */
+.report-container {
+    width: 100%;
+    margin-top: 180px; /* pushes report below fixed header */
+    padding: 30px;
+}
+
+/* button area for the sorting buttons */
+.report-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+/* styling for report buttons */
+.report-buttons input[type=button] {
+    padding: 10px 24px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* hover effect for report buttons */
+.report-buttons input[type=button]:hover {
+    background-color: #1e3a8a;
+}
+
+/* disabled button styling */
+.report-buttons input[type=button]:disabled {
+    background-color: #607084;
+    cursor: not-allowed;
+}
+
+/* company report table styling */
+.report-table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+/* table heading row */
+.report-table thead tr {
+    background-color: #1e3a8a;
+}
+
+/* table heading cells */
+.report-table th {
+    color: #ffffff;
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: bold;
+    border: none;
+}
+
+/* table data cells */
+.report-table td {
+    padding: 11px 18px;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+    color: #1f2937;
+    text-align: left;
+}
+
+/* alternating row colour for readability */
+.report-table tbody tr:nth-child(even) {
+    background-color: #f0f4ff;
+}
+
+/* row hover effect */
+.report-table tbody tr:hover td {
+    background-color: #dbeafe;
+}
+
+
+
+/* styling for blacklisted Y value */
+.blacklisted-y {
+    color: red;
+    font-weight: bold;
+}
+
+/* report page heading */
+.report-title {
+    text-align: center;
+    color: #dbeafe;
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: bold;
+}

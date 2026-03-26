@@ -1,0 +1,246 @@
+/* 
+Student Name : Ryan Mulcahy
+Student Id Number: C00315272
+Date : Mar- 2026
+Purpose : Blacklist Report - CSS
+*/
+
+/* ─── DESIGN TOKENS ───────────────────────────────────────────────────── */
+:root {
+    --navy:        #0d1b2a;
+    --navy-mid:    #16263d;
+    --navy-light:  #2d3e50;
+    --ice:         #dbe4f0;
+    --ice-dim:     #bfcddd;
+    --slate:       #7f8fa3;
+    --accent:      #e63946;        /* sharp red — signals "blacklist" */
+    --accent-dim:  #b52d38;
+    --white:       #ffffff;
+    --off-white:   #f2f6fa;
+    --text-dark:   #0d1b2a;
+    --radius-sm:   8px;
+    --radius-md:   16px;
+    --radius-lg:   28px;
+    --shadow-card: 0 8px 32px rgba(13, 27, 42, 0.22);
+    --shadow-btn:  0 4px 14px rgba(13, 27, 42, 0.18);
+    --font-display: 'Georgia', 'Times New Roman', serif;
+    --font-body:    'Segoe UI', 'Helvetica Neue', sans-serif;
+    --transition:   0.2s ease;
+}
+
+/* ─── PAGE CONTAINER ─────────────────────────────────────────────────── */
+/*
+  margin-top clears the fixed header.
+  margin-left clears the fixed sidebar nav.
+  Everything inside is centered with margin: auto on child elements.
+*/
+.blacklist-report-page {
+    margin-top: 155px;           /* clears the fixed header.php bar */
+    margin-left: 200px;          /* clears the fixed sidebar nav */
+    padding: 50px 60px 60px;
+    color: var(--white);
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: calc(100vw - 200px);  /* fills exactly the space right of sidebar */
+}
+
+/* ─── FORM RESET ─────────────────────────────────────────────────────── */
+.blacklist-report-page .sort-form {
+    background:    transparent !important;
+    margin:        0 !important;
+    padding:       0 !important;
+    max-width:     none !important;
+    box-shadow:    none !important;
+    border-radius: 0 !important;
+}
+
+.blacklist-report-page .sort-form input[type="hidden"] {
+    display: none;
+}
+
+/* ─── REPORT HEADER BOX ──────────────────────────────────────────────── */
+.blacklist-report-page .report-header-box {
+    position: relative;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 0 32px 0;
+    padding: 38px 48px 32px;
+    background: linear-gradient(145deg, var(--navy-mid) 0%, var(--navy-light) 100%);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* decorative top-left accent bar */
+.blacklist-report-page .report-header-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--accent);
+    border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+}
+
+/* faint watermark circle top-right */
+.blacklist-report-page .report-header-box::after {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(230, 57, 70, 0.08);
+    pointer-events: none;
+}
+
+/* eyebrow label above the title */
+.blacklist-report-page .report-eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+/* main title */
+.blacklist-report-page .report-title {
+    margin: 0 0 14px;
+    font-family: var(--font-display);
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+/* thin divider line under title */
+.blacklist-report-page .report-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    border: none;
+    border-radius: 2px;
+    margin: 0 auto 14px;
+}
+
+/* subtitle / meta text */
+.blacklist-report-page .report-subtitle {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--ice-dim);
+    letter-spacing: 0.4px;
+}
+
+/* ─── BUTTON PANEL ───────────────────────────────────────────────────── */
+.blacklist-report-page .report-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 0 0 32px 0;
+    width: 100%;
+    max-width: 780px;
+}
+
+/* individual sort buttons */
+.blacklist-report-page .report-buttons input[type="button"] {
+    width: auto;
+    min-width: 150px;
+    padding: 13px 24px;
+    border: 2px solid transparent;
+    border-radius: var(--radius-sm);
+    background: var(--navy-light);
+    color: var(--ice);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: var(--shadow-btn);
+    transition: background var(--transition),
+                border-color var(--transition),
+                color var(--transition),
+                transform var(--transition);
+}
+
+.blacklist-report-page .report-buttons input[type="button"]:hover {
+    background: var(--navy-mid);
+    border-color: var(--accent);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* active / currently-selected sort */
+.blacklist-report-page .report-buttons input[type="button"]:disabled {
+    background: var(--accent);
+    border-color: var(--accent-dim);
+    color: var(--white);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 0 4px 16px rgba(230, 57, 70, 0.35);
+}
+
+/* ─── REPORT TABLE ───────────────────────────────────────────────────── */
+.blacklist-report-page table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 0 40px 0;
+    border-collapse: collapse;
+    background: var(--white);
+    color: var(--text-dark);
+    box-shadow: var(--shadow-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    font-size: 14.5px;
+    box-sizing: border-box;
+}
+
+.blacklist-report-page th,
+.blacklist-report-page td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #dde3ea;
+    text-align: left;
+}
+
+.blacklist-report-page td {
+    border-right: 1px solid #eef1f5;
+}
+
+.blacklist-report-page td:last-child {
+    border-right: none;
+}
+
+/* header row */
+.blacklist-report-page th {
+    background: var(--navy);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--accent);
+}
+
+/* zebra striping */
+.blacklist-report-page tr:nth-child(even) td {
+    background: var(--off-white);
+}
+
+/* row hover highlight */
+.blacklist-report-page tbody tr:hover td {
+    background: #e8edf4;
+    transition: background 0.15s ease;
+}
+
+/* last row — no bottom border bleed */
+.blacklist-report-page tbody tr:last-child td {
+    border-bottom: none;
+}
