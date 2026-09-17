@@ -219,7 +219,7 @@ The code navigates using **root-relative links** (e.g. `/GroupWork/home.html.php
 | `Kobi/AddScreen/` | `Kobi/Add/` |
 | `Kobi/DeleteScreen/` | `Kobi/Delete/` |
 | `Kobi/AmendViewScreen/` | `Kobi/Amend/` |
-| `Kobi/CarReport/` | `Kobi/CarReport/` *(already matches)* |
+| `Kobi/CarReport/` | `Kobi/CarReport/`|
 | `Ryan/ADD/` | `Ryan/Add/` |
 | `Ryan/DELETE/` | `Ryan/Delete/` |
 | `Ryan/AMEND/` | `Ryan/Amend/` |
