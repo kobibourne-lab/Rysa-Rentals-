@@ -1,24 +1,24 @@
-<link rel="stylesheet" href="../../GroupWork/nav.css">
+<link rel="stylesheet" href="../../Group/nav.css">
 
 <?php
 echo "
 
         <ul>
             <button class='links'>
-                <a href='/GroupWork/home.html.php'>HOME</a>
+                <a href='/Group/home.html.php'>HOME</a>
             </button>
 
             <button class='links'>
-                 <a href='/Jessica/RentalScreen/RentalSelCompany.html.php'>Rentals</a>
+                 <a href='/Jess/RentalScreen/RentalSelCompany.html.php'>Rentals</a>
             </button>
 
             <button class='dropdown'>
                 Rental Category<i></i>
             </button>
                     <div class='dropdown-content'>
-                        <a href='/Kobi/Add/AddRentalCat1.html.php'>Add a New Rental Category</a>
-                        <a href='/Kobi/Delete/delete.html.php'>Delete a Rental Category</a>
-                        <a href='/Kobi/Amend/AmendView.html.php'>Rental Category View/Amend </a>
+                        <a href='/Kobi/AddScreen/AddRentalCat1.html.php'>Add a New Rental Category</a>
+                        <a href='/Kobi/DeleteScreen/delete.html.php'>Delete a Rental Category</a>
+                        <a href='/Kobi/AmendViewScreen/AmendView.html.php'>Rental Category View/Amend </a>
                     </div>
             
             
@@ -26,7 +26,7 @@ echo "
                 Accept Payments<i></i>
             </button>
                     <div class='dropdown-content'>
-                        <a href='/GroupWork/underConstruction.html.php'>Payments</a>
+                        <a href='/Group/underConstruction.html.php'>Payments</a>
                     </div>
             
             
@@ -34,18 +34,18 @@ echo "
                 BlackList Menu<i></i>
             </button>
                     <div class='dropdown-content'>
-                        <a href='/GroupWork/underConstruction.html.php'>Add a New Blacklist Record</a>
-                        <a href='/GroupWork/underConstruction.html.php'>Delete a Blacklist Record</a>
-                        <a href='/GroupWork/underConstruction.html.php'>Blacklist View/Amend Records</a>
+                        <a href='/Group/underConstruction.html.php'>Add a New Blacklist Record</a>
+                        <a href='/Group/underConstruction.html.php'>Delete a Blacklist Record</a>
+                        <a href='/Group/underConstruction.html.php'>Blacklist View/Amend Records</a>
                     </div>
             
             <button class='dropdown'>
                 File Maintenance<i></i>
             </button>
                     <div class='dropdown-content'>
-                        <a href='/Jessica/AddCompany/CompanyAdd.html.php'>Add a New Company</a>
-                        <a href='/Jessica/DeleteCompany/CompanyDelete.html.php'>Delete a Company</a>
-                        <a href='/Jessica/AmendCompany/CompanyAmend.html.php'>Company View/Amend Records</a>
+                        <a href='/Jess/AddCompany/CompanyAdd.html.php'>Add a New Company</a>
+                        <a href='/Jess/DeleteCompany/CompanyDelete.html.php'>Delete a Company</a>
+                        <a href='/Jess/AmendCompany/CompanyAmend.html.php'>Company View/Amend Records</a>
                         <a href='/Ryan/Add/addCar.html.php'>Add a New Car</a>
                         <a href='/Ryan/Delete/deleteCar.html.php'>Delete a Car</a>
                         <a href='/Ryan/Amend/carAmendView.html.php'>Car View/Amend Records</a>
@@ -67,12 +67,12 @@ echo "
                     <div class='dropdown-content'>
                         <a href='/Sarah/CompanyReport/companyReport.php'>Company Reports</a>
                         <a href='/Kobi/CarReport/CarReport.html.php'>Car Reports</a>
-                        <a href='/GroupWork/underConstruction.html.php'>Rental Reports</a>
+                        <a href='/Group/underConstruction.html.php'>Rental Reports</a>
                         <a href='/Ryan/BlacklistReport/blacklistReport.php'>Blacklist Reports</a>
                     </div>
 
             <button class='links'>
-                <a href='/GroupWork/underConstruction.html.php'>Login</a>
+                <a href='/Group/underConstruction.html.php'>Login</a>
             </button>
             
         </ul>
