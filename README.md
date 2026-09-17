@@ -113,9 +113,7 @@ The application connects through a single shared file, **`Group/db.inc.php`**, w
 - `CarType` — car catalogue (manufacturer, model, version, engine size, fuel type)
 - `RentalCat` — rental categories
 - `Blacklist` — blacklisted customers
-
-> ⚠️ **Security note:** `db.inc.php` now ships with **placeholder** credentials (good). However, `Group/DB info.txt` still contains real-looking login details committed to the repo. It's strongly recommended to remove that file and scrub it from git history, and to keep credentials out of version control entirely (e.g. via an untracked config file or environment variables). See *Known Issues*.
-
+- 
 ---
 
 ## 📁 Repository Structure
@@ -264,17 +262,6 @@ All navigation links, shared includes, JavaScript/CSS/image references, and inte
 
 ---
 
-## 🧾 Known Issues / TODO
-
-- [ ] Rename/deploy folders to the structure in *Getting Started* (or refactor links to relative paths so the repo runs without renaming).
-- [ ] Add the missing `amend.js` (or fix the reference) in `Kobi/CarReport/CarReport.html.php`.
-- [ ] Implement `Kobi/DeleteScreen/delete.php` (currently empty).
-- [ ] Replace the placeholder `RYSARentals.png` logo with the real asset.
-- [ ] Remove `Group/DB info.txt` and scrub credentials from git history.
-- [ ] Build out the *under construction* areas: Payments, Login, and the full Blacklist maintenance menu (Add/Delete/View-Amend) and Rental Reports.
-- [ ] Align file/folder casing for case-sensitive (Linux) hosting.
-
----
 
 ## 📄 Credits
 
