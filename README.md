@@ -4,7 +4,7 @@ A web-based **car rental management system** built as a collaborative college we
 
 The application is written in **PHP** with a **MySQL** database, using server-rendered HTML pages, shared CSS, and client-side JavaScript for form validation.
 
-> **Project name:** RYSA Rentals — named after the team (Ryan, Sarah + the wider group: Jessica & Kobi).
+> **Project name:** RYSA Rentals — named after the team (Ryan, Sarah, Jessica & Kobi).
 
 ---
 
