@@ -236,33 +236,6 @@ The code navigates using **root-relative links** (e.g. `/GroupWork/home.html.php
 
 ---
 
-## ✅ Navigation Verification Results
-
-All navigation links, shared includes, JavaScript/CSS/image references, and inter-page redirects were checked against the actual files on disk.
-
-**Summary:** The navigation scheme is **internally consistent and will work once deployed to the folder structure above** — but **it does not resolve against the repository's current folder names as-is**. Two things cause this:
-
-1. **Shared-folder name mismatch (affects every screen).** Every page includes the framework via `../../GroupWork/…`, but the shared folder in the repo is named **`Group`**, not `GroupWork`. Until renamed, no screen can load the header, navigation, styles, or database connection.
-2. **Menu targets use deployment folder names.** The links in `nav.php` point to `Jessica/…`, `Kobi/Add/…`, `Sarah/AddCarType/…`, etc., which differ from the on-disk `Jess/…`, `Kobi/AddScreen/…`, `Sarah/ADD/…`. See the rename table above for the full mapping.
-
-**What works as-is:**
-- Within-folder redirects (e.g. a `.php` processor returning to its own `.html.php` form) resolve correctly.
-- The `Kobi/CarReport/` folder name already matches the menu.
-
-**Discrete issues found (independent of folder layout):**
-
-| Issue | Location | Impact |
-|-------|----------|--------|
-| Missing script file | `Kobi/CarReport/CarReport.html.php` references `<script src="amend.js">`, but no `amend.js`/`Amend.js` exists in that folder | Broken script include on the Car Report page |
-| Empty processing file | `Kobi/DeleteScreen/delete.php` is 0 bytes | The Rental Category delete form posts to an empty handler |
-| Stray empty file | `Kobi/CarReport/copy.html.php` is 0 bytes | Unused; safe to remove |
-| Placeholder logo | `Group/RYSARentals.png` is a 2-byte placeholder referenced by `header.php` | Logo shows as a broken/empty image on every page |
-| Case sensitivity | Names like `amend.js` vs `Amend.js` and `GroupWork` casing | Works on macOS/Windows (case-insensitive) but **will break on a Linux server** even after renaming — match casing exactly |
-| Credentials in repo | `Group/DB info.txt` | Real-looking DB password committed to version control |
-
----
-
-
 ## 📄 Credits
 
 Built by **Jessica, Kobi Bourne, Ryan Mulcahy, and Sarah Crotty** as a group web-development project (2026). Each module folder contains the author's own AI Disclosure documentation.
