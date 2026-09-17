@@ -5,9 +5,9 @@
 -->
 
 <?php
-    $hostname="localhost"; //Where database is located
-    $username="rentacar_db"; //Username for database
-    $password="L1mit3dmile;"; //Databeses password
+    $hostname="host"; //Where database is located -- generic naming 
+    $username="user"; //Username for database
+    $password="password;"; //Databeses password
 
     $dbname="continental"; //The name of the database
 
