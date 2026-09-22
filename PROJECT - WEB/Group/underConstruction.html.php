@@ -1,6 +1,6 @@
 <!-- Name: Group work -->
 <!-- Month: March 2026 -->
-<!-- Purpose: under construction html page for work in progress or unimplemented pages -->
+<!-- Purpose: under construction html page for work in progress or unimplemented pages/ placeholders -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
